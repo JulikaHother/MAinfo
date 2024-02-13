@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
   // Definieren der Basis-URLs für die Bilder
-  const basePath = "/img/";
+  const basePath = "img/";
 
   // Arrays mit den Bildnamen
   const images1 = ["1_IMG1.svg", "1_IMG2.svg", "1_IMG3.svg", "1_IMG4.svg", "1_IMG5.svg", "1_IMG6.svg", "1_IMG7.svg", "1_IMG8.svg"];
