@@ -54,6 +54,28 @@ document.addEventListener("DOMContentLoaded", function () {
   addHoverListener(1, images3, foregroundImg3);
   addHoverListener(2, images1, foregroundImg1);
 
+  setInterval(function () {
+    setRandomImage(0, images1, false);
+    setRandomImage(1, images2, false);
+    setRandomImage(2, images3, false);
+  }, 3000);
+
+
+  const textElements = document.getElementsByClassName('text-wrapper');
+
+  function updateFontVariations() {
+    const elgrValue = Math.floor(Math.random() * 2) + 1; // Zufälliger Wert von 1 oder 2
+    const elshValue = Math.floor(Math.random() * 16) + 1; // Zufälliger Wert von 1 bis 16
+    const wghtValue = Math.random() * (900) + 100; // Zufälliger Wert von 100 bis 1000
+
+    // Anwenden der Schriftartenvariationen auf alle Text-Wrapper-Elemente
+    Array.from(textElements).forEach((textElement) => {
+      textElement.style.fontVariationSettings = `'ELGR' ${elgrValue}, 'ELSH' ${elshValue}, 'wght' ${wghtValue}`;
+    });
+  }
+
+  setInterval(updateFontVariations, 100);
+
 });
 
   // const imageCanvas = document.getElementById('imageCanvas');
