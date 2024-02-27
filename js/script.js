@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function updateFontVariations() {
     const elgrValue = Math.floor(Math.random() * 2) + 1; // Zufälliger Wert von 1 oder 2
     const elshValue = Math.random() * 4 + 8; // Zufälliger Wert von 1 bis 16
-    const wghtValue = Math.random() * (900) + 100; // Zufälliger Wert von 100 bis 1000
+    const wghtValue = Math.random() * 900 + 100; // Zufälliger Wert von 100 bis 1000
 
     // Anwenden der Schriftartenvariationen auf alle Text-Wrapper-Elemente
     Array.from(textElements).forEach((textElement) => {
