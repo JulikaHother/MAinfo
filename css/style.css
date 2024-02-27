@@ -8,7 +8,13 @@
   src: url("../fonts/ABCROMCompressed-Light-Trial.woff") format("woff"), url("../fonts/ABCROMCompressed-Light-Trial.woff2") format("woff2");
 }
 
-html,
+@font-face {
+  font-family: "Handjet";
+  src: url("../fonts/Handjet-VariableFont.ttf") format("true type");
+}
+
+
+Handjet-VariableFont.ttf html,
 body {
   z-index: 1;
   font-family: "TimesNewArial", sans-serif;
@@ -106,39 +112,47 @@ li {
 }
 
 .svg-wrapper p {
-  color: #d3d3d3;
-  margin-top: 2vh;
-  font-size: 15vw;
+  color: lightgray;
+  font-size: 4em;
+  line-height: 75%;
   transform: scale(1, 1.5);
   -webkit-transform: scale(1, 1.5);
   -moz-transform: scale(1, 1.5);
   -ms-transform: scale(1, 1.5);
   -o-transform: scale(1, 1.5);
-  font-family: 'ABCconnect';
-  position: absolute;
-  text-shadow: white 3px 0px 0px, white 2.83487px 0.981584px 0px, white 2.35766px 1.85511px 0px, white 1.62091px 2.52441px 0px, white 0.705713px 2.91581px 0px, white -0.287171px 2.98622px 0px, white -1.24844px 2.72789px 0px, white -2.07227px 2.16926px 0px, white -2.66798px 1.37182px 0px, white -2.96998px 0.42336px 0px, white -2.94502px -0.571704px 0px, white -2.59586px -1.50383px 0px, white -1.96093px -2.27041px 0px, white -1.11013px -2.78704px 0px, white -0.137119px -2.99686px 0px, white 0.850987px -2.87677px 0px, white 1.74541px -2.43999px 0px, white 2.44769px -1.73459px 0px, white 2.88051px -0.838247px 0px;
+  font-family: 'Handjet';
+  /* text-shadow: aqua 10px 0px 0px, aqua 2.83487px 0.981584px 0px, aqua 2.35766px 1.85511px 0px, aqua 1.62091px 2.52441px 0px, aqua 0.705713px 2.91581px 0px, aqua -0.287171px 2.98622px 0px, aqua -1.24844px 2.72789px 0px, aqua -2.07227px 2.16926px 0px, aqua -2.66798px 1.37182px 0px, aqua -2.96998px 0.42336px 0px, aqua -2.94502px -0.571704px 0px, aqua -2.59586px -1.50383px 0px, aqua -1.96093px -2.27041px 0px, aqua -1.11013px -2.78704px 0px, aqua -0.137119px -2.99686px 0px, aqua 0.850987px -2.87677px 0px, aqua 1.74541px -2.43999px 0px, aqua 2.44769px -1.73459px 0px, aqua 2.88051px -0.838247px 0px; */
 }
 
 .svg-wrapper>div {
+  position: relative;
   flex: 1;
   height: 33.33vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background: rgb(244, 223, 232);
-  background: linear-gradient(0deg, rgba(244, 223, 232, 1) 0%, rgba(148, 187, 233, 1) 100%);
+  background: linear-gradient(0deg, rgb(131, 131, 131) 0%, rgb(177, 177, 177) 100%);
+}
+
+.raster {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  inset: 0;
+  object-fit: fill;
 }
 
 .svgs {
   height: 100%;
-  width: 100%;
-  flex: 1;
+  position: absolute;
   overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  object-fit: cover;
   z-index: 10;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  inset: 0;
+  object-fit: fill;
 }
 
 .svg-wrapper p {
@@ -174,6 +188,20 @@ p {
   display: inline-block;
 }
 
+.text-wrapper {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+.text-wrapper p {
+  display: block;
+}
+
 /* .info img {
   display: block;
   width: 100%;
@@ -182,7 +210,7 @@ p {
 } */
 
 
-.datum {
+/* .datum {
   position: absolute;
   color: rgb(13, 255, 0);
   text-align: left;
@@ -211,4 +239,4 @@ p {
   right: 2vw;
   top: 2vh;
 
-}
+} */
