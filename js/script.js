@@ -61,11 +61,11 @@ document.addEventListener("DOMContentLoaded", function () {
   }, 3000);
 
 
-  const textElements = document.getElementsByClassName('text-wrapper');
+  const textElements = document.querySelectorAll('.svg-wrapper p');
 
   function updateFontVariations() {
     const elgrValue = Math.floor(Math.random() * 2) + 1; // Zufälliger Wert von 1 oder 2
-    const elshValue = Math.floor(Math.random() * 16) + 1; // Zufälliger Wert von 1 bis 16
+    const elshValue = Math.random() * 4 + 8; // Zufälliger Wert von 1 bis 16
     const wghtValue = Math.random() * (900) + 100; // Zufälliger Wert von 100 bis 1000
 
     // Anwenden der Schriftartenvariationen auf alle Text-Wrapper-Elemente
@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  setInterval(updateFontVariations, 100);
+  setInterval(updateFontVariations, 5000);
 
 });
 
