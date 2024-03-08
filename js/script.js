@@ -4,11 +4,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const basePath = "img/";
 
   // Arrays mit den Bildnamen
-  const images1 = ["1_IMG1.svg", "1_IMG2.svg", "1_IMG4.svg", "1_IMG5.svg", "1_IMG6.svg", "1_IMG7.svg", "1_IMG8.svg", "1_IMG9.svg", "1_IMG10.svg", "1_IMG11.svg", "1_IMG12.svg", "1_IMG13.svg", "1_IMG14.svg", "1_IMG15.svg", "1_IMG16.svg", "1_IMG17.svg", "1_IMG18.svg", "1_IMG19.svg", "1_IMG21.svg", "1_IMG22.svg"];
+  const images1 = ["1_IMG1.svg", "1_IMG2.svg", "1_IMG4.svg", "1_IMG5.svg", "1_IMG6.svg", "1_IMG7.svg", "1_IMG8.svg", "1_IMG9.svg", "1_IMG10.svg", "1_IMG11.svg", "1_IMG12.svg", "1_IMG13.svg", "1_IMG14.svg", "1_IMG15.svg", "1_IMG16.svg", "1_IMG17.svg", "1_IMG18.svg", "1_IMG19.svg", "1_IMG21.svg"];
   const images2 = ["2_IMG1.svg", "2_IMG2.svg", "2_IMG3.svg", "2_IMG4.svg", "2_IMG5.svg", "2_IMG6.svg", "2_IMG7.svg", "2_IMG8.svg", "2_IMG9.svg", "2_IMG10.svg", "2_IMG11.svg", "2_IMG12.svg", "2_IMG13.svg", "2_IMG14.svg", "2_IMG15.svg", "2_IMG16.svg", "2_IMG17.svg", "2_IMG18.svg", "2_IMG19.svg", "2_IMG20.svg", "2_IMG21.svg", "2_IMG22.svg", "2_IMG23.svg"];
   const images3 = ["3_IMG1.svg", "3_IMG2.svg", "3_IMG3.svg", "3_IMG4.svg", "3_IMG5.svg", "3_IMG6.svg", "3_IMG7.svg", "3_IMG8.svg", "3_IMG10.svg", "3_IMG11.svg", "3_IMG12.svg", "3_IMG13.svg", "3_IMG14.svg", "3_IMG15.svg", "3_IMG16.svg", "3_IMG17.svg", "3_IMG18.svg", "3_IMG19.svg", "3_IMG20.svg", "3_IMG21.svg", "3_IMG22.svg", "3_IMG23.svg"];
 
-  const foregroundImg1 = ["1_IMG1.svg", "1_IMG2.svg", "1_IMG4.svg", "1_IMG5.svg", "1_IMG6.svg", "1_IMG7.svg", "1_IMG8.svg", "1_IMG9.svg", "1_IMG10.svg", "1_IMG11.svg", "1_IMG12.svg", "1_IMG13.svg", "1_IMG14.svg", "1_IMG15.svg", "1_IMG16.svg", "1_IMG17.svg", "1_IMG18.svg", "1_IMG19.svg", "1_IMG21.svg", "1_IMG22.svg"];
+  const foregroundImg1 = ["1_IMG1.svg", "1_IMG2.svg", "1_IMG4.svg", "1_IMG5.svg", "1_IMG6.svg", "1_IMG7.svg", "1_IMG8.svg", "1_IMG9.svg", "1_IMG10.svg", "1_IMG11.svg", "1_IMG12.svg", "1_IMG13.svg", "1_IMG14.svg", "1_IMG15.svg", "1_IMG16.svg", "1_IMG17.svg", "1_IMG18.svg", "1_IMG19.svg", "1_IMG21.svg"];
   const foregroundImg2 = ["2_IMG1.svg", "2_IMG2.svg", "2_IMG3.svg", "2_IMG4.svg", "2_IMG5.svg", "2_IMG6.svg", "2_IMG7.svg", "2_IMG8.svg", "2_IMG9.svg", "2_IMG10.svg", "2_IMG11.svg", "2_IMG12.svg", "2_IMG13.svg", "2_IMG14.svg", "2_IMG15.svg", "2_IMG16.svg", "2_IMG17.svg", "2_IMG18.svg", "2_IMG19.svg", "2_IMG20.svg", "2_IMG21.svg", "2_IMG22.svg", "2_IMG23.svg"];
   const foregroundImg3 = ["3_IMG1.svg", "3_IMG2.svg", "3_IMG3.svg", "3_IMG4.svg", "3_IMG5.svg", "3_IMG6.svg", "3_IMG7.svg", "3_IMG8.svg", "3_IMG10.svg", "3_IMG11.svg", "3_IMG12.svg", "3_IMG13.svg", "3_IMG14.svg", "3_IMG15.svg", "3_IMG16.svg", "3_IMG17.svg", "3_IMG18.svg", "3_IMG19.svg", "3_IMG20.svg", "3_IMG21.svg", "3_IMG22.svg", "3_IMG23.svg"];
 
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }, 3000);
 
 
-  const textElements = document.querySelectorAll('.svg-wrapper p');
+  const textElements = document.querySelectorAll('.text-wrapper p');
 
   function updateFontVariations() {
     const elgrValue = Math.floor(Math.random() * 2) + 1; // Zufälliger Wert von 1 oder 2

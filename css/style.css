@@ -1,25 +1,44 @@
 @font-face {
-  font-family: "ABCconnect";
-  src: url("../fonts/ABCConnect-NailItalic-Trial.woff") format("woff"), url("../fonts/ABCConnect-NailItalic-Trial.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "ABCrom";
-  src: url("../fonts/ABCROMCompressed-Light-Trial.woff") format("woff"), url("../fonts/ABCROMCompressed-Light-Trial.woff2") format("woff2");
-}
-
-@font-face {
   font-family: "Handjet";
   src: url("../fonts/Handjet-VariableFont.ttf") format("truetype");
   font-style: normal;
   font-weight: 100 900;
 }
 
+@font-face {
+  font-family: "Burg";
+  src: url("../fonts/Burg-Lettern.woff") format("woff"), url("../fonts/Burg-Lettern.woff2") format("woff2");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NeueMontreal";
+  src: url("../fonts/PPNeueMontreal-Book.woff") format("woff"), url("../fonts/PPNeueMontreal-Book.woff2") format("woff2");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NeueMontrealMedium";
+  src: url("../fonts/PPNeueMontreal-Medium.woff") format("woff"), url("../fonts/PPNeueMontreal-Medium.woff2") format("woff2");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NeueMontrealBold";
+  src: url("../fonts/PPNeueMontreal-Bold.woff") format("woff"), url("../fonts/PPNeueMontreal-Bold.woff2") format("woff2");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Connect";
+  src: url("../fonts/ABCConnect-Torx-Trial.woff") format("woff"), url("../fonts/ABCConnect-Torx-Trial.woff2") format("woff2");
+  font-style: normal;
+}
+
 
 html,
 body {
   z-index: 1;
-  font-family: "TimesNewArial", sans-serif;
   font-variation-settings: "srff" 0, "ital" 0, "wght" 70;
   font-weight: normal;
   padding: 0;
@@ -71,9 +90,60 @@ li {
   align-items: center;
 } */
 
+.burg {
+  font-family: 'Burg';
+  font-size: 2vh;
+  z-index: 1000;
+  color: aqua;
+}
 
+.burg-wrapper2 {
+  position: absolute;
+  width: 100vw;
+  inset: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-around;
+  margin: 2vh;
+}
 
+.burg-wrapper {
+  position: absolute;
+  width: 100vw;
+  inset: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  right: 10vh;
+}
 
+.burg-wrapper3 {
+  position: absolute;
+  width: 100vw;
+  inset: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-around;
+  margin: 2vh;
+}
+
+.datum-wrapper p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: 'Handjet';
+  font-size: 2.5vw;
+  color: lightgray;
+  font-variation-settings: "wght" 300, "ELSH" 2.0, "ELGR" 1.0;
+  /* text-shadow:
+    1px 0 rgb(0, 64, 255),
+    0 -1px rgb(0, 64, 255),
+    -1px 0 rgb(0, 64, 255),
+    0 1px rgb(0, 64, 255); */
+}
 
 #container {
   position: absolute;
@@ -113,9 +183,9 @@ li {
   overflow: hidden;
 }
 
-.svg-wrapper p {
+/* .text-wrapper p {
   color: rgb(211, 211, 211);
-  font-size: 450%;
+  font-size: 3vh;
   line-height: 80%;
   transform: scale(1, 1.5);
   -webkit-transform: scale(1, 1.5);
@@ -126,7 +196,74 @@ li {
   font-weight: 100;
   font-variation-settings: "ELGR" 1, "ELSH" 8, "wght" 1000;
   transition: all 2000ms;
-  /* text-shadow: aqua 0.5px 0px 0px, aqua 2.83487px 0.981584px 0px, aqua 2.35766px 1.85511px 0px, aqua 1.62091px 2.52441px 0px, aqua 0.705713px 2.91581px 0px, aqua -0.287171px 2.98622px 0px, aqua -1.24844px 2.72789px 0px, aqua -2.07227px 2.16926px 0px, aqua -2.66798px 1.37182px 0px, aqua -2.96998px 0.42336px 0px, aqua -2.94502px -0.571704px 0px, aqua -2.59586px -1.50383px 0px, aqua -1.96093px -2.27041px 0px, aqua -1.11013px -2.78704px 0px, aqua -0.137119px -2.99686px 0px, aqua 0.850987px -2.87677px 0px, aqua 1.74541px -2.43999px 0px, aqua 2.44769px -1.73459px 0px, aqua 2.88051px -0.838247px 0px; */
+} */
+
+.text-wrapperIMG {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: end;
+  z-index: 5;
+  height: 33.33vh;
+  mix-blend-mode: difference;
+
+}
+
+.container {
+  width: 33.33%;
+  height: 80%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  gap: 5px 5px;
+  row-gap: 5px;
+  column-gap: 5px;
+  /* border-radius: 3px;
+  border-style: solid;
+  border-color: blue; */
+
+  color: rgb(255, 251, 0);
+  line-height: 77%;
+  transform: scale(1, 1.2);
+  -webkit-transform: scale(1, 1.2);
+  -moz-transform: scale(1, 1.2);
+  -ms-transform: scale(1, 1.2);
+  -o-transform: scale(1, 1.2);
+  font-family: "NeueMontrealMedium";
+
+}
+
+
+#master {
+  font-size: 5vh;
+  margin-left: 0.2vw;
+  line-height: 85%;
+}
+
+#datum {
+  font-size: 7vh;
+  line-height: 85%;
+  font-family: "Connect";
+}
+
+
+#vss {
+  line-height: 77%;
+  font-size: 1.7vh;
+}
+
+#ig {
+  font-size: 9.5vh;
+  line-height: 77%;
+  justify-content: center;
+  margin: vw;
+
+
+
 }
 
 .svg-wrapper>div {
@@ -146,6 +283,7 @@ li {
   width: 100%;
   inset: 0;
   object-fit: fill;
+  z-index: 1;
 }
 
 .svgs {
@@ -163,12 +301,6 @@ li {
 .svg-wrapper p {
   z-index: 5;
 
-}
-
-
-.master {
-  bottom: 2vh;
-  right: 2vw;
 }
 
 p {
@@ -206,42 +338,3 @@ p {
 .text-wrapper p {
   display: block;
 }
-
-/* .info img {
-  display: block;
-  width: 100%;
-  max-width: 30vw;
-  transform: rotate(20deg);
-} */
-
-
-/* .datum {
-  position: absolute;
-  color: rgb(13, 255, 0);
-  text-align: left;
-  margin: 0;
-  font-family: "ABCrom";
-  font-size: 4em;
-  line-height: 300%;
-  width: 50vw;
-  text-shadow: rgba(148, 187, 233, 1) 3px 0px 0px, rgba(148, 187, 233, 1) 2.83487px 0.981584px 0px, rgba(148, 187, 233, 1) 2.35766px 1.85511px 0px, rgba(148, 187, 233, 1) 1.62091px 2.52441px 0px, rgba(148, 187, 233, 1) 0.705713px 2.91581px 0px, rgba(148, 187, 233, 1) -0.287171px 2.98622px 0px, rgba(148, 187, 233, 1) -1.24844px 2.72789px 0px, rgba(148, 187, 233, 1) -2.07227px 2.16926px 0px, rgba(148, 187, 233, 1) -2.66798px 1.37182px 0px, rgba(148, 187, 233, 1) -2.96998px 0.42336px 0px, rgba(148, 187, 233, 1) -2.94502px -0.571704px 0px, rgba(148, 187, 233, 1) -2.59586px -1.50383px 0px, rgba(148, 187, 233, 1) -1.96093px -2.27041px 0px, rgba(148, 187, 233, 1) -1.11013px -2.78704px 0px, rgba(148, 187, 233, 1) -0.137119px -2.99686px 0px, rgba(148, 187, 233, 1) 0.850987px -2.87677px 0px, rgba(148, 187, 233, 1) 1.74541px -2.43999px 0px, rgba(148, 187, 233, 1) 2.44769px -1.73459px 0px, rgba(148, 187, 233, 1) 2.88051px -0.838247px 0px;
-
-  left: 2vw;
-  top: 2vh;
-}
-
-.burg {
-  position: absolute;
-  color: rgb(13, 255, 0);
-  text-align: right;
-  margin: 0;
-  font-family: "ABCrom";
-  font-size: 4em;
-  line-height: 300%;
-  width: 50vw;
-  text-shadow: rgba(148, 187, 233, 1) 3px 0px 0px, rgba(148, 187, 233, 1) 2.83487px 0.981584px 0px, rgba(148, 187, 233, 1) 2.35766px 1.85511px 0px, rgba(148, 187, 233, 1) 1.62091px 2.52441px 0px, rgba(148, 187, 233, 1) 0.705713px 2.91581px 0px, rgba(148, 187, 233, 1) -0.287171px 2.98622px 0px, rgba(148, 187, 233, 1) -1.24844px 2.72789px 0px, rgba(148, 187, 233, 1) -2.07227px 2.16926px 0px, rgba(148, 187, 233, 1) -2.66798px 1.37182px 0px, rgba(148, 187, 233, 1) -2.96998px 0.42336px 0px, rgba(148, 187, 233, 1) -2.94502px -0.571704px 0px, rgba(148, 187, 233, 1) -2.59586px -1.50383px 0px, rgba(148, 187, 233, 1) -1.96093px -2.27041px 0px, rgba(148, 187, 233, 1) -1.11013px -2.78704px 0px, rgba(148, 187, 233, 1) -0.137119px -2.99686px 0px, rgba(148, 187, 233, 1) 0.850987px -2.87677px 0px, rgba(148, 187, 233, 1) 1.74541px -2.43999px 0px, rgba(148, 187, 233, 1) 2.44769px -1.73459px 0px, rgba(148, 187, 233, 1) 2.88051px -0.838247px 0px;
-
-  right: 2vw;
-  top: 2vh;
-
-} */
