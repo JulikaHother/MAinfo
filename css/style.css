@@ -1,11 +1,4 @@
 @font-face {
-  font-family: "Handjet";
-  src: url("../fonts/Handjet-VariableFont.ttf") format("truetype");
-  font-style: normal;
-  font-weight: 100 900;
-}
-
-@font-face {
   font-family: "Burg";
   src: url("../fonts/Burg-Lettern.woff") format("woff"), url("../fonts/Burg-Lettern.woff2") format("woff2");
   font-style: normal;
@@ -84,12 +77,6 @@ li {
 }
 
 
-/* .img {
-  width: 100vw;
-  height: 100vh;
-  align-items: center;
-} */
-
 .burg {
   font-family: 'Burg';
   font-size: 2vh;
@@ -130,29 +117,9 @@ li {
   margin: 2vh;
 }
 
-.datum-wrapper p {
-  position: absolute;
-  top: 0;
-  left: 0;
-  font-family: 'Handjet';
-  font-size: 2.5vw;
-  color: lightgray;
-  font-variation-settings: "wght" 300, "ELSH" 2.0, "ELGR" 1.0;
-  /* text-shadow:
-    1px 0 rgb(0, 64, 255),
-    0 -1px rgb(0, 64, 255),
-    -1px 0 rgb(0, 64, 255),
-    0 1px rgb(0, 64, 255); */
-}
 
-#container {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  z-index: 10000;
-  /* opacity: 0.2; */
-  mix-blend-mode: lighten;
-}
+
+
 
 #imageCanvas {
   position: absolute;
@@ -162,17 +129,7 @@ li {
   height: 100vh;
 }
 
-#textOverlay {
-  position: absolute;
-  top: 10vh;
-  left: 10vw;
-  color: orangered;
-  font-size: 128px;
-  line-height: 90%;
-  pointer-events: none;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: red;
-}
+
 
 
 .svg-wrapper {
@@ -183,50 +140,149 @@ li {
   overflow: hidden;
 }
 
-/* .text-wrapper p {
-  color: rgb(211, 211, 211);
-  font-size: 3vh;
-  line-height: 80%;
-  transform: scale(1, 1.5);
-  -webkit-transform: scale(1, 1.5);
-  -moz-transform: scale(1, 1.5);
-  -ms-transform: scale(1, 1.5);
-  -o-transform: scale(1, 1.5);
-  font-family: 'Handjet';
-  font-weight: 100;
-  font-variation-settings: "ELGR" 1, "ELSH" 8, "wght" 1000;
-  transition: all 2000ms;
-} */
 
-.text-wrapperIMG {
+
+.parent {
+  display: flex;
+  width: 100vw;
+  height: 33vh;
+  align-items: flex-end;
+  /* By default, align children to the bottom */
+  justify-content: space-between;
+  /* Spread the children evenly */
+}
+
+.container {
+  width: 33vw;
+  height: 40%;
+  background-color: blue;
+  mix-blend-mode: difference;
+  z-index: 5;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.containerMitte {
+  width: 33vw;
+  height: 98%;
+  background-color: blue;
+  mix-blend-mode: difference;
+  z-index: 5;
+
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.top-aligned {
+  align-self: flex-start;
+  /* Align this container to the top */
+}
+
+.bottom-aligned {
+  /* These containers are already aligned to the bottom by the parent's styling. */
+  /* You can add specific styling for bottom-aligned containers here if needed. */
+}
+
+.center-aligned {
+  align-self: center;
+  text-align: right;
+  /* Align this container to the top */
+}
+
+.datum {
+  font-size: 7vh;
+  line-height: 85%;
+  font-family: "Connect";
+  background-color: #fff43b;
+  color: black;
+  margin: 5px;
+
+}
+
+.master {
+  line-height: 80%;
+  font-size: 2.5vh;
+  font-family: "Connect";
+  background-color: #fff43b;
+  color: black;
+  margin: 5px;
+
+}
+
+.img {
+  line-height: 80%;
+  font-size: 10.5vh;
+  font-family: "NeueMontrealMedium";
+  background-color: #fff43b;
+  color: black;
+  transform: scale(1, 1.2);
+  -webkit-transform: scale(1, 1.2);
+  -moz-transform: scale(1, 1.2);
+  -ms-transform: scale(1, 1.2);
+  -o-transform: scale(1, 1.2);
+  margin: 5px;
+
+}
+
+/* text-align: start;
+width: 33%;
+height: 40%;
+display: flex;
+align-items: center;
+justify-content: left;
+color: white;
+margin-top: 2vh;
+background-color: blue;
+transform: scale(1, 1.2);
+-webkit-transform: scale(1, 1.2);
+-moz-transform: scale(1, 1.2);
+-ms-transform: scale(1, 1.2);
+-o-transform: scale(1, 1.2);
+font-family: "Connect"; */
+
+
+
+
+
+
+
+/* .text-wrapperIMG {
   position: absolute;
   inset: 0;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  text-align: end;
   z-index: 5;
   height: 33.33vh;
   mix-blend-mode: difference;
+} */
 
+/* .text-wrapperIMG3 {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
+  z-index: 5;
+  height: 33.33vh;
+  mix-blend-mode: difference;
 }
 
 .container {
-  width: 33.33%;
+  width: 33%;
   height: 80%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 5px;
-  gap: 5px 5px;
-  row-gap: 5px;
-  column-gap: 5px;
-  /* border-radius: 3px;
-  border-style: solid;
-  border-color: blue; */
-
-  color: rgb(255, 251, 0);
+  text-align: end;
+  margin: 2px;
+  color: black;
+  background-color: blue;
   line-height: 77%;
   transform: scale(1, 1.2);
   -webkit-transform: scale(1, 1.2);
@@ -234,37 +290,11 @@ li {
   -ms-transform: scale(1, 1.2);
   -o-transform: scale(1, 1.2);
   font-family: "NeueMontrealMedium";
-
-}
-
-
-#master {
-  font-size: 5vh;
-  margin-left: 0.2vw;
-  line-height: 85%;
-}
-
-#datum {
-  font-size: 7vh;
-  line-height: 85%;
-  font-family: "Connect";
-}
-
-
-#vss {
-  line-height: 77%;
-  font-size: 1.7vh;
-}
-
-#ig {
-  font-size: 9.5vh;
-  line-height: 77%;
-  justify-content: center;
-  margin: vw;
+} */
 
 
 
-}
+
 
 .svg-wrapper>div {
   position: relative;
