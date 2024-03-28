@@ -20,15 +20,11 @@ document.addEventListener("DOMContentLoaded", function () {
       const imageUrl = basePath + imageArray[randomIndex];
       document.querySelectorAll('.svg-wrapper div .svgs')[divIndex].setAttribute('src', imageUrl);
     } else {
-      let r = Math.floor(Math.random() * 1)
-      if (r == 0) {
-        const randomIndex = Math.floor(Math.random() * imageArray.length);
-        const imageUrl = basePath + imageArray[randomIndex];
-        document.querySelectorAll('.svg-wrapper .raster')[divIndex].style.display = "block";
-        document.querySelectorAll('.svg-wrapper .raster')[divIndex].setAttribute('src', imageUrl);
-      } else {
-        document.querySelectorAll('.svg-wrapper .raster')[divIndex].style.display = "none"
-      }
+      const randomIndex = Math.floor(Math.random() * imageArray.length);
+      const imageUrl = basePath + imageArray[randomIndex];
+      document.querySelectorAll('.svg-wrapper .raster')[divIndex].style.display = "block";
+      document.querySelectorAll('.svg-wrapper .raster')[divIndex].setAttribute('src', imageUrl);
+
     }
   }
 
@@ -42,7 +38,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   function addHoverListener(divIndex, imageArray, foregroundImgArray) {
-    console.log(document.querySelectorAll('.svg-wrapper .row')[divIndex])
     document.querySelectorAll('.svg-wrapper .row')[divIndex].addEventListener('mouseenter', function () {
 
       setRandomImage((divIndex + 1) % 3, imageArray, false); // Nutzt Modulo für zyklische Zuweisung
@@ -61,42 +56,55 @@ document.addEventListener("DOMContentLoaded", function () {
   }, 3000);
 
 
-  const textElements = document.querySelectorAll('.text-wrapper p');
+  document.addEventListener("mousemove", function (e) {
+    const mouse = document.querySelector("#customCursor")
+    console.log(mouse);
+    let x = e.clientX;
+    let y = e.clientY;
+    console.log(x, y);
+    mouse.style.left = x + "px";
+    mouse.style.top = y + "px";
 
-  function updateFontVariations() {
-    const elgrValue = Math.floor(Math.random() * 2) + 1; // Zufälliger Wert von 1 oder 2
-    const elshValue = Math.random() * 4 + 8; // Zufälliger Wert von 1 bis 16
-    const wghtValue = Math.random() * 900 + 100; // Zufälliger Wert von 100 bis 1000
 
-    // Anwenden der Schriftartenvariationen auf alle Text-Wrapper-Elemente
-    Array.from(textElements).forEach((textElement) => {
-      textElement.style.fontVariationSettings = `'ELGR' ${elgrValue}, 'ELSH' ${elshValue}, 'wght' ${wghtValue}`;
-    });
   }
+  )
 
-  setInterval(updateFontVariations, 5000);
+  // const textElements = document.querySelectorAll('.text-wrapper p');
+
+  // function updateFontVariations() {
+  //   const elgrValue = Math.floor(Math.random() * 2) + 1; // Zufälliger Wert von 1 oder 2
+  //   const elshValue = Math.random() * 4 + 8; // Zufälliger Wert von 1 bis 16
+  //   const wghtValue = Math.random() * 900 + 100; // Zufälliger Wert von 100 bis 1000
+
+  //   // Anwenden der Schriftartenvariationen auf alle Text-Wrapper-Elemente
+  //   Array.from(textElements).forEach((textElement) => {
+  //     textElement.style.fontVariationSettings = `'ELGR' ${elgrValue}, 'ELSH' ${elshValue}, 'wght' ${wghtValue}`;
+  //   });
+  // }
+
+  // setInterval(updateFontVariations, 5000);
 
 });
 
-  // const imageCanvas = document.getElementById('imageCanvas');
-  // const ctx = imageCanvas.getContext('2d');
-  // const img = new Image();
-  // img.src = 'img/hintergrund.png'; // Setzen Sie hier den Pfad zu Ihrem Bild
+// const imageCanvas = document.getElementById('imageCanvas');
+// const ctx = imageCanvas.getContext('2d');
+// const img = new Image();
+// img.src = 'img/hintergrund.png'; // Setzen Sie hier den Pfad zu Ihrem Bild
 
-  // img.onload = function () {
-  //   drawImage();
-  // };
+// img.onload = function () {
+//   drawImage();
+// };
 
-  // document.getElementById('container').addEventListener('mousemove', function (e) {
-  //   const pixelationLevel = Math.max(1, Math.min(e.pageX / this.offsetWidth * 100, 100));
-  //   drawImage(pixelationLevel);
-  //   const blurValue = (100 - pixelationLevel) / 20; // Wertebereich anpassen, um den Effekt zu verstärken oder abzuschwächen
-  // });
+// document.getElementById('container').addEventListener('mousemove', function (e) {
+//   const pixelationLevel = Math.max(1, Math.min(e.pageX / this.offsetWidth * 100, 100));
+//   drawImage(pixelationLevel);
+//   const blurValue = (100 - pixelationLevel) / 20; // Wertebereich anpassen, um den Effekt zu verstärken oder abzuschwächen
+// });
 
-  // function drawImage(pixelationLevel = 1) {
-  //   ctx.clearRect(0, 0, imageCanvas.width, imageCanvas.height);
-  //   const scaleFactor = Math.max(1, pixelationLevel);
-  //   ctx.drawImage(img, 0, 0, imageCanvas.width / scaleFactor, imageCanvas.height / scaleFactor);
-  //   ctx.drawImage(imageCanvas, 0, 0, imageCanvas.width / scaleFactor, imageCanvas.height / scaleFactor, 0, 0, imageCanvas.width, imageCanvas.height);
-  // }
+// function drawImage(pixelationLevel = 1) {
+//   ctx.clearRect(0, 0, imageCanvas.width, imageCanvas.height);
+//   const scaleFactor = Math.max(1, pixelationLevel);
+//   ctx.drawImage(img, 0, 0, imageCanvas.width / scaleFactor, imageCanvas.height / scaleFactor);
+//   ctx.drawImage(imageCanvas, 0, 0, imageCanvas.width / scaleFactor, imageCanvas.height / scaleFactor, 0, 0, imageCanvas.width, imageCanvas.height);
+// }
 

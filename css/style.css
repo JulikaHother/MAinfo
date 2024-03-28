@@ -40,16 +40,26 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow: hidden;
-  /* cursor: none; */
+  cursor: none;
 }
 
 #customCursor {
   position: fixed;
   pointer-events: none;
   z-index: 10000;
-  font-family: "ABCconnect";
+  font-family: "NeueMontrealMedium";
+  transform: scale(1, 1.2) translateX(-50%) translateY(-50%);
+  -webkit-transform: scale(1, 1.2) translateX(-50%) translateY(-50%);
+  -moz-transform: scale(1, 1.2) translateX(-50%) translateY(-50%);
+  -ms-transform: scale(1, 1.2) translateX(-50%) translateY(-50%);
+  -o-transform: scale(1, 1.2) translateX(-50%) translateY(-50%);
   font-size: 1em;
-  color: aqua;
+  color: #666633;
+  /* color: rgb(255, 0, 242); */
+  /* background-color: #999999; */
+  background-color: aqua;
+  padding: 3px;
+  white-space: nowrap;
 }
 
 
@@ -82,6 +92,10 @@ li {
   font-size: 2vh;
   z-index: 1000;
   color: aqua;
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  padding: 3px
 }
 
 .burg-wrapper2 {
@@ -101,7 +115,7 @@ li {
   inset: 0;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: start;
   justify-content: space-around;
   right: 10vh;
 }
@@ -158,20 +172,13 @@ li {
   background-color: blue;
   mix-blend-mode: difference;
   z-index: 5;
-
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
 }
 
 .containerMitte {
-  width: 33vw;
-  background-color: blue;
   height: 98%;
-  mix-blend-mode: difference;
-  z-index: 5;
-
-  display: flex;
   align-items: center;
   justify-content: end;
 }
@@ -181,9 +188,11 @@ li {
   /* Align this container to the top */
 }
 
+
+
 .bottom-aligned {
-  /* These containers are already aligned to the bottom by the parent's styling. */
-  /* You can add specific styling for bottom-aligned containers here if needed. */
+  align-self: flex-end;
+
 }
 
 .center-aligned {
@@ -214,7 +223,7 @@ li {
 
 .img {
   line-height: 80%;
-  font-size: 10.5vh;
+  font-size: 10.8vh;
   font-family: "NeueMontrealMedium";
   background-color: #fff43b;
   color: black;
@@ -367,4 +376,55 @@ p {
 
 .text-wrapper p {
   display: block;
+}
+
+@media (max-width:1300px) {
+
+  .parent>div:first-child,
+  .burg:first-child {
+    display: none;
+  }
+
+  .container {
+    width: 50vw;
+  }
+}
+
+
+
+@media (max-width:800px) {
+
+  html,
+  body {
+    cursor: auto;
+  }
+
+  #customCursor {
+    display: none;
+  }
+
+  .parent>div:first-child,
+  .parent>div:last-child,
+  .burg:first-child,
+  .burg:last-child {
+    display: none;
+  }
+
+  .img {
+    font-size: 17.8vw;
+  }
+
+  p.groß {
+    font-size: 13vw;
+  }
+
+  .container {
+    width: 100vw;
+  }
+
+  .svgs,
+  .raster {
+    width: 200%;
+    transform: translateX(-50%);
+  }
 }
